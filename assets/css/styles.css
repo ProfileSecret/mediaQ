@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer"
+    ;
+    grid-template-rows: 10% 10% 70% 10%;
+    height: 100vh;
+}
+
+.box {
+    border: 1px solid black
+}
+
+span {
+    grid-area: header;
+    display: flex;
+    padding: 10px;
+    column-gap: 3%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 50px;
+    margin: 0;
+}
+
+ul {
+    display: none;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas:
+        "article"
+        "button"
+    ;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    grid-area: article;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0%;
+}
+
+label {
+    text-align: center;
+}
+
+select {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+p {
+    padding: 10px;
+    background-color: blue;
+    font-family: monospace;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    width: 50%;
+}
+
+.button {
+    grid-area: button;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h3 {
+    text-transform: capitalize;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+footer i {
+    cursor: pointer;
+}
+
+@media (min-width: 567px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header header header"
+            "nav main main"
+            "nav main main"
+            "footer footer footer"
+        ;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: auto 65% auto;
+        height: 100vh;
+    }
+
+    header {
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span {
+        display: flex;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        border: 1px solid black;
+        margin: 10px;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+        font-family: monospace;
+    }
+
+    li {
+        margin: 15px;
+        font-size: xx-large;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        gap: 3%;
+    }
+
+    article {
+        grid-area: article;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        border: 1px solid blue;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    p {
+        padding: 10px;
+        background-color: blue;
+        font-family: monospace;
+        color: white;
+        cursor: pointer;
+    }
+
+    button {
+        grid-area: button;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 3%;
+    }
+
+    footer {
+        grid-area: footer;
+        font-family: monospace;
+        padding: 2%;
+    }
+
+    label {
+        font-family: monospace;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-template-areas:
+            "header nav nav"
+            "header main main"
+            "header main main"
+            "footer main main"
+        ;
+        grid-template-rows: 10% 10% 70% 10%;
+        height: 100vh;
+    }
+
+    .box {
+        border: 1px solid black
+    }
+
+    header {
+        grid-area: header;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    h1 {
+        font-family: monospace;
+        font-size: 50px;
+        margin: 0;
+    }
+
+    ul {
+        flex-direction: column;
+        text-transform: capitalize;
+        font-family: monospace;
+    }
+
+    li {
+        cursor: pointer;
+    }
+
+    nav {
+        grid-area: nav;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: scroll;
+        gap: 3%;
+    }
+
+    article {
+        grid-area: article;
+        display: flex;
+        flex-direction: column;
+        height: 300px;
+        width: 300px;
+        border: 1px solid blue;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+    }
+
+    p {
+        padding: 10px;
+        background-color: blue;
+        font-family: monospace;
+        color: white;
+        cursor: pointer;
+    }
+
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    label {
+        text-align: center;
+        font-family: monospace;
+        font-size: x-large;
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    button {
+        grid-area: button;
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 3%;
+    }
+
+    footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: monospace;
+    }
+
+    h3 {
+        text-transform: capitalize;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    footer i {
+        cursor: pointer;
+    }
+}
